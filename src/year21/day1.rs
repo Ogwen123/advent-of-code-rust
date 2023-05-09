@@ -1,8 +1,9 @@
 use std::fs;
 
 pub fn part1() {
+    // correct
     let data: String =
-        fs::read_to_string("./src/inputs/2022/day1.txt").expect("reading file failed");
+        fs::read_to_string("./src/inputs/2021/day1.txt").expect("reading file failed");
 
     let split_data = data.split("\n");
 
@@ -12,11 +13,6 @@ pub fn part1() {
 
     for line in split_data {
         let current_depth: i32 = line.trim().to_owned().parse::<i32>().unwrap();
-
-        //let current_depth = match current_depth_raw {
-        //    Ok(i32) => i32,
-        //    Err(ParseIntError) => panic!("error when parsing int"),
-        //};
 
         if current_depth > previous_depth && iter_count != 0 {
             increase_counter += 1;
@@ -28,8 +24,9 @@ pub fn part1() {
 }
 
 pub fn part2() {
+    //correct
     let data: String =
-        fs::read_to_string("./src/inputs/2022/day1.txt").expect("reading file failed");
+        fs::read_to_string("./src/inputs/2021/day1.txt").expect("reading file failed");
 
     let split_data = data.split("\n");
 

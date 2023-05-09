@@ -24,15 +24,26 @@ fn main() {
         counter += 1
     }
 
-    if puzzle_year == "22" {
-        match puzzle_day {
+    match puzzle_year {
+        "21" => match puzzle_day {
             "1" => {
                 year21::day1::part1();
                 year21::day1::part2()
             }
+            "2" => {
+                year21::day2::part1();
+                year21::day2::part2()
+            }
+            "3" => {
+                year21::day3::part1();
+                year21::day3::part2()
+            }
+            "4" => {
+                year21::day4::part1();
+                year21::day4::part2()
+            }
             _ => println!("Doesn't exist"),
-        }
-    } else {
-        println!("Doesn't exist")
+        },
+        _ => println!("Not found"),
     }
 }
